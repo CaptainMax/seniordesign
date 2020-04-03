@@ -1,14 +1,43 @@
 <%- include("partials/header") %>
 <div class="ui main text container segment">
-    <div class="ui huge header"><%= blog.title %></div>
+    <div class="ui huge header"><%= blog.id %></div>
     <div class="ui top attached ">
         <div class="item">
-            <img class="ui centered rounded image" src="<%= blog.image %>" >
+            <!-- <img class="ui centered rounded image" src="<%= blog.image %>" > -->
+            
             <div class="content">
                 <span><%= blog.created.toDateString() %></span>
             </div>
+            <div class = "description">
+                <p>id: <%=blog.id%></p>
+                <!-- <img src="<%= blog.image%>"> -->
+            </div>
+            <div class = "description">
+                <p>locationName: <%=blog.locationName%></p>
+                <!-- <img src="<%= blog.image%>"> -->
+            </div>
+            <div class = "description">
+                <p>LocationType: <%=blog.locationType%></p>
+                <!-- <img src="<%= blog.image%>"> -->
+            </div>
+            <div class = "description">
+                <p>Epicenter Latitude: <%=blog.elat%></p>
+                <!-- <img src="<%= blog.image%>"> -->
+            </div>
+            <div class = "description">
+                <p>Epicenter Longitude: <%=blog.elon%></p>
+                <!-- <img src="<%= blog.image%>"> -->
+            </div>
+            <div class = "description">
+                <p>Range: <%=blog.range%></p>
+                <!-- <img src="<%= blog.image%>"> -->
+            </div>
+            <div class = "description">
+                <p>altitude: <%=blog.altitude%></p>
+                <!-- <img src="<%= blog.image%>"> -->
+            </div>
             <div class="description">
-                <p><%- blog.body %></p>
+                <p><%- blog.description %></p>
             </div>
 
             <a class="ui orange basic button" href="/blogs/<%= blog._id%>/edit">Edit</a>

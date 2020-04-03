@@ -1,18 +1,37 @@
 <%- include("partials/header") %>
 <div class="ui main text container segement">
-    <div class="ui huge header">New Blog</div>
+    <div class="ui huge header">New Location</div>
     <form class ="ui form" action="/blogs" method="POST">
         <div class = "field">
-            <label>Title</label>
-            <input type = "text" name = "blog[title]" placeholder="title">
-        
+            <label>id</label>
+            <input type = "text" name = "blog[id]" placeholder="id">
         <div class = "field">
-            <label>Image</label>
-        <input type = "text" name = "blog[image]" placeholder="image">
+                <label>locationName</label>
+            <input type = "text" name = "blog[locationName]" placeholder="locationName">
+            </div>
+        <div class = "field">
+            <label>locationType</label>
+        <input type = "text" name = "blog[locationType]" placeholder="locationType">
         </div>
         <div class = "field">
-            <label>Blog Content</label>
-            <textarea name="blog[body]"></textarea>
+            <label>Epicenter Latitude</label>
+        <input type = "text" name = "blog[elat]" placeholder="elat">
+        </div>
+        <div class = "field">
+            <label>Epicenter Longitude</label>
+        <input type = "text" name = "blog[elon]" placeholder="elon">
+        </div>
+        <div class = "field">
+            <label>Range</label>
+        <input type = "text" name = "blog[range]" placeholder="range">
+        </div>
+        <div class = "field">
+            <label>altitude</label>
+        <input type = "text" name = "blog[altitude]" placeholder="altitude">
+        </div>
+        <div class = "field">
+            <label>description Content</label>
+            <textarea name="blog[description]"></textarea>
         </div>
         <input class = "ui violet basic button" type = "submit">
     </form>

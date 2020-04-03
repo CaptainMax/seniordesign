@@ -7,13 +7,15 @@
             <h1>Index page</h1>
             <% blogs.forEach(function(blog){ %>
                 <div class = "item">
-                    <div class = "image">
-                        <img src="<%= blog.image%>">
-                    </div>
+                
                     <div class = "content">
                         <a class="header" href ="/blogs/<%= blog._id%>""><%=blog.title%></a>
                         <div class="meta">
                             <span><%= blog.created.toDateString()%></span>
+                        </div>
+                        <div class = "description">
+                            <p>LocationType: <%=blog.locationType%></p>
+                            <!-- <img src="<%= blog.image%>"> -->
                         </div>
                         <div class="description">
                             <% if(blog.body && blog.body.length > 0) { %> 

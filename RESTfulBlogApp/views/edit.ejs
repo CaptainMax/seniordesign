@@ -1,19 +1,39 @@
 <%- include("partials/header") %>
 <div class="ui main text container segement">
-    <div class="ui huge header">Edit <%= blog.title %></div>
+    <div class="ui huge header">Edit <%= blog.id %></div>
     <!-- fix post request for update -->
     <form class ="ui form" action="/blogs/<%= blog._id %>?_method=PUT" method="POST">
-        <div class = "field">
-            <label>Title</label>
-            <input type = "text" name = "blog[title]" value ="<%= blog.title %>">
-        
-        <div class = "field">
-            <label>Image</label>
-        <input type = "text" name = "blog[image]" value ="<%= blog.image %>">
+        <div class = "id">
+            <label>ID Number</label>
+            <input type = "text" name = "blog[id]" value ="<%= blog.id %>">
         </div>
         <div class = "field">
-            <label>Blog Content</label>
-            <textarea name="blog[body]"><%= blog.body %></textarea>
+            <label>locationName</label>
+            <input type = "text" name = "blog[locationName]" value ="<%= blog.locationName %>">
+        </div>
+        <div class = "field">
+            <label>locationType</label>
+        <input type = "text" name = "blog[locationType]" value ="<%= blog.locationType %>">
+        </div>
+        <div class = "field">
+            <label>Epicenter Latitude</label>
+        <input type = "text" name = "blog[elat]" value ="<%= blog.elat %>">
+        </div>
+        <div class = "field">
+            <label>Epicenter Longitude</label>
+        <input type = "text" name = "blog[elon]" value ="<%= blog.elon %>">
+        </div>
+        <div class = "field">
+            <label>Range</label>
+        <input type = "text" name = "blog[range]" value ="<%= blog.range %>">
+        </div>
+        <div class = "field">
+            <label>altitude</label>
+        <input type = "text" name = "blog[altitude]" value ="<%= blog.altitude %>">
+        </div>
+        <div class = "field">
+            <label>description Content</label>
+            <textarea name="blog[description]"><%= blog.description %></textarea>
         </div>
         <input class = "ui violet basic button" type = "submit">
     </form>
